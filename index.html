@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script type="module" src="main.js"></script>
+    <title>Fish game</title>
+</head>
+<body>
+    <!-- Sound control -->
+    <div class="sound">
+        <a href="#"><img id="sound_button" src="imgs/mute.png"></a>
+    </div>
+
+    <!-- Games screen -->
+    <div id="game" hidden>
+        <div class="game_screan">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+    </div>
+    
+    <!-- Main game menu screen -->
+    <div id="start">
+        <div class="menu">
+            <p class="score">Best score</p>
+            <p class="score" id="best_score">0</p>
+            <div class="difficult">
+                <a class="difficult_button" id="difficult_button" href="#">Difficult:</a>
+                <p class="difficult_level" id="difficult">normal</p>
+            </div>
+            <a class="button" id="instruction_button" href="#">Instruction</a>
+            <a class="button" id="start_button" href="#">Start Game</a>
+        </div>
+    </div>
+
+    <!-- Instruction screen -->
+    <div id="instruction" hidden>
+        <div class="menu">
+            <p>&#127907;</p>
+            <p class="instruction">Use the mouse to move the rod and the spacebar to refill the bait.  Depending on the difficulty level, you will have a different amount of time and points. Good luck!</p>
+            <a href="#" id="back1_button">Back</a>
+        </div>
+    </div>
+    
+    <!-- Game over menu screen -->
+    <div id="game-over" hidden>
+        <div class="menu">
+            <p class="score">&#128033;</p>
+            <p class="score">Your score</p>
+            <p class="score" id="your_score">0</p>
+            <a href="#" id="restart_button">Restart game</a>
+            <a href="#" id="back2_button">Back</a>
+        </div>
+    </div>
+</body>
+</html>
